@@ -8,8 +8,7 @@ language_dict = {
     "ukrainian": "uk",
     "french": "fr",
     "german": "de",
-    "spanish": "es",
-    "russian": "ru"
+    "spanish": "es"
 }
 
 # 1. Функція перекладу

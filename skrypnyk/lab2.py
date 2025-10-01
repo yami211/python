@@ -9,8 +9,7 @@ language_dict = {
     "ukrainian": "uk",
     "french": "fr",
     "german": "de",
-    "spanish": "es",
-    "russian": "ru"
+    "spanish": "es"
 }
  # функція перекладу
 def TransLate(text, lang):
