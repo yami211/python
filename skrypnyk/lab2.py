@@ -1,7 +1,7 @@
 from deep_translator import GoogleTranslator
 from langdetect import detect, DetectorFactory, detect_langs
 
-# Для стабільного визначення мови
+
 DetectorFactory.seed = 0
 
 language_dict = {
@@ -12,7 +12,7 @@ language_dict = {
     "spanish": "es",
     "russian": "ru"
 }
-
+ # функція перекладу
 def TransLate(text, lang):
     try:
         target_code = CodeLang(lang)
@@ -21,11 +21,11 @@ def TransLate(text, lang):
     except Exception as e:
         return f"Error: {e}"
 
-# Надійна функція визначення мови
+# Функція визначення мови
 def LangDetect(txt):
     try:
-        lang_code = detect(txt)            # визначає мову, наприклад 'uk'
-        confidence = max([p.prob for p in detect_langs(txt)])  # оцінка впевненості
+        lang_code = detect(txt)            
+        confidence = max([p.prob for p in detect_langs(txt)])  
         return lang_code, confidence
     except Exception:
         return None, None
@@ -34,7 +34,7 @@ def CodeLang(lang):
     lang = lang.lower()
     if lang in language_dict:  # назва мови -> код
         return language_dict[lang]
-    elif lang in language_dict.values():  # код -> код
+    elif lang in language_dict.values():  # код 
         return lang
     else:
         raise ValueError(f"Unknown language: {lang}")

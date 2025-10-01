@@ -1,9 +1,8 @@
 from googletrans import Translator
 
-# Ініціалізація перекладача
+
 translator = Translator()
 
-# Словник для конвертації назв мов та ISO кодів
 language_dict = {
     "english": "en",
     "ukrainian": "uk",
@@ -35,7 +34,7 @@ def CodeLang(lang):
     lang = lang.lower()
     if lang in language_dict:  # назва мови -> код
         return language_dict[lang]
-    elif lang in language_dict.values():  # код -> код
+    elif lang in language_dict.values():  # код 
         return lang
     else:
         raise ValueError(f"Unknown language: {lang}")
