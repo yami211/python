@@ -1,0 +1,9 @@
+{
+  "input_file": "text.txt",
+  "target_lang": "uk",
+  "module": "gtrans4",
+  "out": "screen",
+  "max_chars": 1000,
+  "max_words": 200,
+  "max_sentences": 10
+}
